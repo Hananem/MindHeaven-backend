@@ -5,7 +5,7 @@ const app = express()
 app.use(express.json())
 // Cors Policy
 app.use(cors({
-  origin: "http://localhost:3000"
+  origin: "https://mindheaven-apd7.onrender.com"
 }));
 
 
