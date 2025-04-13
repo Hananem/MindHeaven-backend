@@ -96,7 +96,7 @@ module.exports.loginUserCtrl = asyncHandler(async (req, res) => {
       await verificationToken.save();
     }
 
-    const link = `http://localhost:3000/users/${user._id}/verify/${verificationToken.token}`;
+    const link = `https://mindheaven-apd7.onrender.com/users/${user._id}/verify/${verificationToken.token}`;
 
     const htmlTemplate = `
     <div>
