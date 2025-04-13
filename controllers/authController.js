@@ -43,7 +43,7 @@ module.exports.registerUserCtrl = asyncHandler(async (req, res) => {
   await verifictionToken.save();
 
   // Making the link
-  const link = `http://localhost:3000/users/${user._id}/verify/${verifictionToken.token}`;
+  const link = `https://mindheaven-apd7.onrender.com/users/${user._id}/verify/${verifictionToken.token}`;
 
   // Putting the link into an html template
   const htmlTemplate = `
