@@ -15,6 +15,13 @@ app.use(cors({
 // ✅ Serve static images or files
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 
+// ✅ Serve React frontend from build
+app.use(express.static(path.join(__dirname, "MindHeaven-frontend", "build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "MindHeaven-frontend", "build", "index.html"));
+});
+
 // ✅ API Routes
 app.use("/api/auth", require("./routes/authRoute"));
 app.use("/api/users", require("./routes/usersRoute"));
